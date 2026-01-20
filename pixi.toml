@@ -1,0 +1,62 @@
+[workspace]
+name = "2026-openff-workshops"
+description = "2026 Open Force Field Workshops"
+authors = ["Josh Mitchell <yoshanuikabundi@gmail.com>"]
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "osx-arm64"]
+license = "MIT"
+license-file = "LICENSE"
+readme = "README.md"
+# homepage = "https://docs.openforcefield.org/workshops/2026"
+# repository = "https://github.com/openforcefield/2026-openff-workshops"
+
+[dependencies]
+python = ">=3.12"
+openff-toolkit-examples = ">=0.17.1"
+openff-nagl-base = ">=0.5.2"
+openff-nagl-models = "*"
+nglview = ">=3.0.6,<3.1.0"
+ipython = "*"
+jupyterlab = ">=4"
+ipywidgets = ">=8"
+jupyterlab_execute_time = "*"
+jupyterlab-lsp = "*"
+jupyterlab_rise = "*"
+jedi-language-server = "*"
+jupyterlab_code_formatter = "*"
+black = "*"
+isort = "*"
+snakeviz = "*"
+pdbfixer = "*"
+mdanalysis = "*"
+openff-interchange = "*"
+ambertools = "*"
+
+[feature.fit.dependencies]
+pytorch-cpu = ">=2.6"
+smee = "*"
+descent = "*"
+
+[feature.ptm.dependencies]
+# Pablo deps
+rdkit = "*"
+openmm = "*"
+numpy = "*"
+rustworkx = "*"
+pyxdg = "*"
+gemmi = "*"
+
+[feature.ptm.pypi-dependencies]
+openff-pablo = { git = "https://github.com/openforcefield/openff-pablo.git", rev = "v0.2.1" }
+
+[feature.fit.tasks.fitting-workshop]
+cmd = "jupyter lab --ServerApp.iopub_data_rate_limit=10000000 fitting-workshop.ipynb"
+cwd = "fit"
+
+[feature.ptm.tasks.ptm-workshop]
+cmd = "jupyter lab --ServerApp.iopub_data_rate_limit=10000000 ptm-workshop.ipynb"
+cwd = "ptm"
+
+[environments]
+fit = { features = ["fit"] }
+ptm = { features = ["ptm"] }
