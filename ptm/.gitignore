@@ -1,0 +1,8 @@
+trajectory.dcd
+
+*.pdb
+*.pqr
+!8gjs_prepared.pdb
+!7KI0_prepared_popc_kut_repositioned.pdb
+protein-prep.ipynb
+utils.py

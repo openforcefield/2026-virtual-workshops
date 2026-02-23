@@ -27,19 +27,23 @@ jupyterlab_code_formatter = "*"
 black = "*"
 isort = "*"
 snakeviz = "*"
-pdbfixer = "*"
-mdanalysis = "*"
-openff-interchange = "*"
-ambertools = "*"
+tqdm = "*"
 
 [feature.fit.dependencies]
-pytorch-cpu = ">=2.6"
+pytorch = ">=2.6"
 smee = "*"
 descent = "*"
+openff-qcsubmit = ">=0.57.0"
+matplotlib = ">=3.10.5"
+tensorboardx = ">=2.6.2.2"
+tensorboard = "*"
+json5 = ">=0.12.1"
+polars = ">=1.33.1"
+pydantic = ">=2.0,<3"
 
 [feature.ptm.dependencies]
 # Pablo deps
-rdkit = "*"
+rdkit = ">=2025"
 openmm = "*"
 numpy = "*"
 rustworkx = "*"
@@ -47,16 +51,27 @@ pyxdg = "*"
 gemmi = "*"
 
 [feature.ptm.pypi-dependencies]
-openff-pablo = { git = "https://github.com/openforcefield/openff-pablo.git", rev = "v0.2.1" }
+# openff-pablo = { git = "https://github.com/openforcefield/openff-pablo.git", rev = "v0.2.1" }
+openff-pablo = { git = "https://github.com/openforcefield/openff-pablo.git", rev = "a7556e691bf5f3738698ad7debff28044ec1df58" }
 
-[feature.fit.tasks.fitting-workshop]
+[feature.prep.dependencies]
+propka = "*"
+pdb2pqr = "*"
+pdbfixer = "*"
+mdanalysis = ">=2.10.0,<3"
+
+[feature.fit-tasks.tasks.fitting-workshop]
 cmd = "jupyter lab --ServerApp.iopub_data_rate_limit=10000000 fitting-workshop.ipynb"
 cwd = "fit"
 
-[feature.ptm.tasks.ptm-workshop]
+[feature.ptm-tasks.tasks.ptm-workshop]
 cmd = "jupyter lab --ServerApp.iopub_data_rate_limit=10000000 ptm-workshop.ipynb"
 cwd = "ptm"
 
+[feature.prep-tasks.tasks.lab]
+cmd = "jupyter lab --ServerApp.iopub_data_rate_limit=10000000"
+
 [environments]
-fit = { features = ["fit"] }
-ptm = { features = ["ptm"] }
+fit = { features = ["fit", "fit-tasks"] }
+ptm = { features = ["ptm", "ptm-tasks"], solve-group = "ptm" }
+prep = { features = ["ptm", "prep", "prep-tasks"], solve-group = "ptm" }
