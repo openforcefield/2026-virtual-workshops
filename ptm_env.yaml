@@ -1,0 +1,32 @@
+name: ptm-workshop
+channels:
+- conda-forge
+- nodefaults
+dependencies:
+- rdkit >=2025
+- openmm *
+- numpy *
+- rustworkx *
+- pyxdg *
+- gemmi *
+- python >=3.12
+- openff-toolkit-examples >=0.17.1
+- openff-nagl-base >=0.5.2
+- openff-nagl-models *
+- nglview >=3.0.6,<3.1.0
+- ipython *
+- jupyterlab >=4
+- ipywidgets >=8
+- jupyterlab_execute_time *
+- jupyterlab-lsp *
+- jupyterlab_rise *
+- jedi-language-server *
+- jupyterlab_code_formatter *
+- black *
+- isort *
+- snakeviz *
+- tqdm *
+- pip
+- pip:
+  - openff-pablo @ git+https://github.com/openforcefield/openff-pablo.git@a7556e691bf5f3738698ad7debff28044ec1df58
+

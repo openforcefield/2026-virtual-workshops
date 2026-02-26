@@ -6,7 +6,39 @@ ci:
   autoupdate_schedule: quarterly
 exclude: '^(\.tox|ci/templates|\.bumpversion\.cfg)(/|$)'
 repos:
-  - repo: https://github.com/kynan/nbstripout
-    rev: 0.8.2
+  - repo: local
     hooks:
-      - id: nbstripout
+      - id: export-fit-env
+        name: export fit_env.yaml from pixi
+        entry: |-
+          bash -c "
+            pixi workspace export conda-environment -e fit -n fitting-workshop \
+            > fit_env.yaml                                                     \
+            && git ls-files --error-unmatch fit_env.yaml
+          "
+        language: conda
+        additional_dependencies:
+          - pixi>=0.59.0
+          - git
+          - bash
+        files: "pixi.toml|pixi.lock|fit_env.yaml"
+        pass_filenames: false
+      - id: export-ptm-env
+        name: export ptm_env.yaml from pixi
+        entry: |-
+          bash -c "
+            pixi workspace export conda-environment -e ptm -n ptm-workshop     \
+            > ptm_env.yaml                                                     \
+            && git ls-files --error-unmatch ptm_env.yaml
+          "
+        language: conda
+        additional_dependencies:
+          - pixi>=0.59.0
+          - git
+          - bash
+        files: "pixi.toml|pixi.lock|ptm_env.yaml"
+        pass_filenames: false
+  # - repo: https://github.com/kynan/nbstripout
+  #   rev: 0.8.2
+  #   hooks:
+  #     - id: nbstripout
