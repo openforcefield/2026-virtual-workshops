@@ -40,10 +40,11 @@ tensorboard = "*"
 json5 = ">=0.12.1"
 polars = ">=1.33.1"
 pydantic = ">=2.0,<3"
-mdanalysis = "*"             # Required by yammbs
+mdanalysis = "*"
+smirnoff99frosst = ">=1.1.0.1" # Required by yammbs
 
 [feature.fit.pypi-dependencies]
-yammbs = { git = "https://github.com/openforcefield/yammbs.git", rev = "4f88e07" }
+yammbs = { git = "https://github.com/openforcefield/yammbs.git", rev = "8468ad9" }
 
 [feature.ptm.dependencies]
 # Pablo deps

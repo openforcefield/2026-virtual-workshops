@@ -14,6 +14,7 @@ dependencies:
 - polars >=1.33.1
 - pydantic >=2.0,<3
 - mdanalysis *
+- smirnoff99frosst >=1.1.0.1
 - python >=3.12
 - openff-toolkit-examples >=0.17.1
 - openff-nagl-base >=0.5.2
@@ -33,5 +34,5 @@ dependencies:
 - tqdm *
 - pip
 - pip:
-  - yammbs @ git+https://github.com/openforcefield/yammbs.git@4f88e07
+  - yammbs @ git+https://github.com/openforcefield/yammbs.git@8468ad9
 
