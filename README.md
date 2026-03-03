@@ -20,7 +20,7 @@ Click the following on the top of this page:
 
 ### Option A: Using conda/(micro)mamba
 
-If you don't already have conda/mamba/micromamba installed, you can quickly install a lightweight version in your local directory. The fastest way is using the instructions [here](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html).
+If you don't already have conda/mamba/micromamba installed, you can quickly micromamba in your local directory. The fastest way is using the instructions [here](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html).
 
 Then for the fitting workshop run:
 
