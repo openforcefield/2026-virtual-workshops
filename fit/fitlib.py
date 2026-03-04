@@ -428,6 +428,8 @@ def write_smirnoff(
 def plot_metrics(store: MoleculeStore, force_fields: list[str], plot_dir: str|Path):
     """Plot metrics of a list of force fields."""
     metrics = store.get_metrics()
+    plot_dir = Path(plot_dir)
+    plot_dir.mkdir(exist_ok=True, parents=True)
 
     x_ranges = {
         "dde": (-16.0, 16.0),
@@ -499,12 +501,14 @@ def plot_metrics(store: MoleculeStore, force_fields: list[str], plot_dir: str|Pa
 
         axis.legend(loc=0)
 
-        figure.savefig(Path(plot_dir) / f"{key}.png", dpi=300)
+        figure.savefig(plot_dir / f"{key}.png", dpi=300)
 
 
-def plot_torsion_cdfs(force_fields: list[str], metrics: MetricCollection, plot_dir: str):
+def plot_torsion_cdfs(force_fields: list[str], metrics: MetricCollection, plot_dir: str | Path):
     """Plot the cumulative distribution functions for the RMSD, RMSE, and Jensen-Shannon distance."""
     x_ranges = {"rmsd": (0, 0.14), "rmse": (-0.3, 5), "js_distance": (None, None)}
+    plot_dir = Path(plot_dir)
+    plot_dir.mkdir(exist_ok=True, parents=True)
 
     units = {
         "rmsd": r"$\mathrm{\AA}$",
@@ -582,7 +586,7 @@ def plot_torsion_cdfs(force_fields: list[str], metrics: MetricCollection, plot_d
 
         axis.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
 
-        figure.savefig(f"{plot_dir}/{key}.png", dpi=300, bbox_inches="tight")
+        figure.savefig(plot_dir / f"{key}.png", dpi=300, bbox_inches="tight")
 
 
 def get_rms(array: np.ndarray) -> float:
@@ -593,9 +597,11 @@ def get_rms(array: np.ndarray) -> float:
 def plot_torsion_rms_stats(
     force_fields: list[str],
     metrics: MetricCollection,
-    plot_dir: str,
+    plot_dir: str | Path,
 ) -> None:
     """Plot the RMS values for the RMSD and RMSE."""
+    plot_dir = Path(plot_dir)
+    plot_dir.mkdir(exist_ok=True, parents=True)
 
     units = {
         "rmsd": r"$\mathrm{\AA}$",
@@ -629,15 +635,17 @@ def plot_torsion_rms_stats(
 
         # Save the figure
         figure.tight_layout()
-        figure.savefig(f"{plot_dir}/{key}_rms.png", dpi=300, bbox_inches="tight")
+        figure.savefig(plot_dir / f"{key}_rms.png", dpi=300, bbox_inches="tight")
 
 
 def plot_torsion_rms_js_distance(
     force_fields: list[str],
     metrics: MetricCollection,
-    plot_dir: str,
+    plot_dir: str | Path,
 ) -> None:
     """Plot the RMS JS distance for each force field."""
+    plot_dir = Path(plot_dir)
+    plot_dir.mkdir(exist_ok=True, parents=True)
 
     rms_js_distance = {
         force_field: get_rms(
@@ -663,15 +671,17 @@ def plot_torsion_rms_js_distance(
 
     # Save the figure
     figure.tight_layout()
-    figure.savefig(f"{plot_dir}/mean_js_distance.png", dpi=300, bbox_inches="tight")
+    figure.savefig(plot_dir / f"mean_js_distance.png", dpi=300, bbox_inches="tight")
 
 
 def plot_torsion_mean_error_distribution(
     force_fields: list[str],
     metrics: MetricCollection,
-    plot_dir: str,
+    plot_dir: str | Path,
 ) -> None:
     """Plot the distribution of mean errors for each force field."""
+    plot_dir = Path(plot_dir)
+    plot_dir.mkdir(exist_ok=True, parents=True)
 
     units = {
         "mean_error": r"kcal mol$^{-1}$",
@@ -700,5 +710,5 @@ def plot_torsion_mean_error_distribution(
     # Save the figure
     figure.tight_layout()
     figure.savefig(
-        f"{plot_dir}/mean_error_distribution.png", dpi=300, bbox_inches="tight"
+        plot_dir / f"mean_error_distribution.png", dpi=300, bbox_inches="tight"
     )
