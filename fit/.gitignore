@@ -11,3 +11,4 @@ othercells.py
 !lipids_benchmark_torsions.sqlite
 !train_molecules.pickle
 !train_records.pickle
+!optimized.offxml
