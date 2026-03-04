@@ -425,7 +425,7 @@ def write_smirnoff(
     return optimized_smirnoff_ff
 
 
-def plot_metrics(store: MoleculeStore, force_fields: list[str]):
+def plot_metrics(store: MoleculeStore, force_fields: list[str], plot_dir: str|Path):
     """Plot metrics of a list of force fields."""
     metrics = store.get_metrics()
 
@@ -499,7 +499,7 @@ def plot_metrics(store: MoleculeStore, force_fields: list[str]):
 
         axis.legend(loc=0)
 
-        figure.savefig(f"{key}.png", dpi=300)
+        figure.savefig(Path(plot_dir) / f"{key}.png", dpi=300)
 
 
 def plot_torsion_cdfs(force_fields: list[str], metrics: MetricCollection, plot_dir: str):
