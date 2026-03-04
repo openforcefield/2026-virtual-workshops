@@ -7,3 +7,7 @@ figures/
 *.offxml
 othercells.py
 *.pickle
+!lipids_benchmark.sqlite
+!lipids_benchmark_torsions.sqlite
+!train_molecules.pickle
+!train_records.pickle
