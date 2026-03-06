@@ -2789,7 +2789,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zlib-ng-2.2.5-hde8ca8f_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.25.0-py312h5253ce2_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
-      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=a7556e691bf5f3738698ad7debff28044ec1df58#a7556e691bf5f3738698ad7debff28044ec1df58
+      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=v0.2.2#fb364e9a9c0bdbde1262d1e822fe13d823033f40
       osx-64:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/_openmp_mutex-4.5-7_kmp_llvm.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/_python_abi3_support-1.0-hd8ed1ab_2.conda
@@ -3155,7 +3155,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zlib-ng-2.2.5-h55e386d_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstandard-0.25.0-py312h01f6755_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstd-1.5.7-h3eecb57_6.conda
-      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=a7556e691bf5f3738698ad7debff28044ec1df58#a7556e691bf5f3738698ad7debff28044ec1df58
+      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=v0.2.2#fb364e9a9c0bdbde1262d1e822fe13d823033f40
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/_openmp_mutex-4.5-7_kmp_llvm.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/_python_abi3_support-1.0-hd8ed1ab_2.conda
@@ -3520,7 +3520,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-ng-2.2.5-h3470cca_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstandard-0.25.0-py312h37e1c23_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
-      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=a7556e691bf5f3738698ad7debff28044ec1df58#a7556e691bf5f3738698ad7debff28044ec1df58
+      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=v0.2.2#fb364e9a9c0bdbde1262d1e822fe13d823033f40
   ptm:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
@@ -3883,7 +3883,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zlib-ng-2.2.5-hde8ca8f_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.25.0-py312h5253ce2_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
-      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=a7556e691bf5f3738698ad7debff28044ec1df58#a7556e691bf5f3738698ad7debff28044ec1df58
+      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=v0.2.2#fb364e9a9c0bdbde1262d1e822fe13d823033f40
       osx-64:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/_openmp_mutex-4.5-7_kmp_llvm.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/_python_abi3_support-1.0-hd8ed1ab_2.conda
@@ -4229,7 +4229,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zlib-ng-2.2.5-h55e386d_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstandard-0.25.0-py312h01f6755_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstd-1.5.7-h3eecb57_6.conda
-      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=a7556e691bf5f3738698ad7debff28044ec1df58#a7556e691bf5f3738698ad7debff28044ec1df58
+      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=v0.2.2#fb364e9a9c0bdbde1262d1e822fe13d823033f40
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/_openmp_mutex-4.5-7_kmp_llvm.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/_python_abi3_support-1.0-hd8ed1ab_2.conda
@@ -4574,7 +4574,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-ng-2.2.5-h3470cca_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstandard-0.25.0-py312h37e1c23_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
-      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=a7556e691bf5f3738698ad7debff28044ec1df58#a7556e691bf5f3738698ad7debff28044ec1df58
+      - pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=v0.2.2#fb364e9a9c0bdbde1262d1e822fe13d823033f40
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-7_kmp_llvm.conda
   build_number: 7
@@ -14887,9 +14887,9 @@ packages:
   - pkg:pypi/openff-nagl-models?source=hash-mapping
   size: 53380163
   timestamp: 1757448697983
-- pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=a7556e691bf5f3738698ad7debff28044ec1df58#a7556e691bf5f3738698ad7debff28044ec1df58
+- pypi: git+https://github.com/openforcefield/openff-pablo.git?rev=v0.2.2#fb364e9a9c0bdbde1262d1e822fe13d823033f40
   name: openff-pablo
-  version: 0.2.1.post30+ga7556e6
+  version: 0.2.2
   requires_dist:
   - pytest>=6.0 ; extra == 'test'
   - pytest-xdist>=2.5 ; extra == 'test'

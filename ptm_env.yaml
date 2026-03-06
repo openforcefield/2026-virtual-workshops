@@ -28,5 +28,5 @@ dependencies:
 - tqdm *
 - pip
 - pip:
-  - openff-pablo @ git+https://github.com/openforcefield/openff-pablo.git@a7556e691bf5f3738698ad7debff28044ec1df58
+  - openff-pablo @ git+https://github.com/openforcefield/openff-pablo.git@v0.2.2
 
