@@ -3,6 +3,6 @@ trajectory.dcd
 *.pdb
 *.pqr
 !8gjs_prepared.pdb
-!7KI0_prepared_popc_kut_repositioned.pdb
+!7KI0_prepared.pdb
 protein-prep.ipynb
 utils.py
