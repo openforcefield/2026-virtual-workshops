@@ -6,7 +6,7 @@ This year we have both conda/mamba and pixi environments available. Downloading 
 
 ### Option A: Git clone
 
-`git clone https://github.com/openforcefield/2026-virtual-workshops.git`
+`git clone --depth 1 https://github.com/openforcefield/2026-virtual-workshops.git`
 
 ### Option B: Download zipped repo manually
 
