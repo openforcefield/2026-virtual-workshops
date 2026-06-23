@@ -10,7 +10,8 @@ dependencies:
 - pyxdg *
 - gemmi *
 - python >=3.12
-- openff-toolkit-examples >=0.17.1
+- openff-toolkit-examples >=0.18.1
+- openff-interchange >=0.5.3
 - openff-nagl-base >=0.5.2
 - openff-nagl-models *
 - nglview >=3.0.6,<3.1.0
