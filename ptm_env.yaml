@@ -9,7 +9,7 @@ dependencies:
 - rustworkx *
 - pyxdg *
 - gemmi *
-- python >=3.12
+- python 3.12.*
 - openff-toolkit-examples >=0.18.1
 - openff-interchange >=0.5.3
 - openff-nagl-base >=0.5.2
@@ -27,6 +27,8 @@ dependencies:
 - isort *
 - snakeviz *
 - tqdm *
+- pyarrow 20.*
+- datasets 4.*
 - pip
 - pip:
   - openff-pablo @ git+https://github.com/openforcefield/openff-pablo.git@v0.2.2
