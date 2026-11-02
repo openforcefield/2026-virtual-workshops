@@ -19,9 +19,9 @@ from matplotlib import pyplot
 from yammbs.torsion import TorsionStore
 from yammbs.torsion.outputs import MetricCollection
 import datasets
-import descent
-import descent.train
-import smee
+import tyff
+import tyff.train
+import tyff
 from openff.qcsubmit._pydantic import root_validator
 from openff.qcsubmit.results.filters import (
     CMILESResultFilter,
@@ -352,8 +352,8 @@ def plot_torsions(plot_dir: str, force_fields: list[str], store: TorsionStore) -
 
 def update_parameters(
     handler: ParameterHandler,
-    potential: smee.TensorPotential,
-    config: descent.train.ParameterConfig | None,
+    potential: tyff.TensorPotential,
+    config: tyff.train.ParameterConfig | None,
 ):
 
     for key, values in zip(
@@ -383,8 +383,8 @@ def update_parameters(
 
 def update_attributes(
     handler: ParameterHandler,
-    potential: smee.TensorPotential,
-    config: descent.train.AttributeConfig | None,
+    potential: tyff.TensorPotential,
+    config: tyff.train.AttributeConfig | None,
 ):
     for name, value, unit in zip(
         [] if potential.attribute_cols is None else potential.attribute_cols,
@@ -399,28 +399,28 @@ def update_attributes(
 
 def write_smirnoff(
     initial_ff: ForceField,
-    optimized_tensor_ff: smee.TensorForceField,
-    parameters: None | dict[str, descent.train.ParameterConfig] = None,
-    attributes: None | dict[str, descent.train.AttributeConfig] = None,
+    optimized_tensor_ff: tyff.TensorForceField,
+    parameters: None | dict[str, tyff.train.ParameterConfig] = None,
+    attributes: None | dict[str, tyff.train.AttributeConfig] = None,
 ):
 
     optimized_smirnoff_ff = ForceField(initial_ff.to_string())
     for potential in optimized_tensor_ff.potentials:
-        print(potential.type)
-        handler = optimized_smirnoff_ff[potential.type]
-        if parameters is None or potential.type in parameters:
+        print(potential.handler_type)
+        handler = optimized_smirnoff_ff[potential.handler_type]
+        if parameters is None or potential.handler_type in parameters:
             print("  updating parameters")
             update_parameters(
                 handler,
                 potential,
-                None if parameters is None else parameters[potential.type],
+                None if parameters is None else parameters[potential.handler_type],
             )
-        if attributes is None or potential.type in attributes:
+        if attributes is None or potential.handler_type in attributes:
             print("  updating attributes")
             update_attributes(
                 handler,
                 potential,
-                None if attributes is None else attributes[potential.type],
+                None if attributes is None else attributes[potential.handler_type],
             )
     return optimized_smirnoff_ff
 

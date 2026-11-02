@@ -11,7 +11,7 @@ readme = "README.md"
 # repository = "https://github.com/openforcefield/2026-openff-workshops"
 
 [dependencies]
-python = ">=3.12"
+python = "=3.12"
 openff-toolkit-examples = ">=0.18.1"
 openff-interchange = ">=0.5.3"
 openff-nagl-base = ">=0.5.2"
@@ -29,6 +29,9 @@ black = "*"
 isort = "*"
 snakeviz = "*"
 tqdm = "*"
+# shims
+pyarrow = "20.*"
+datasets = "4.*"  # can probably remove when pyarrow >20
 
 [feature.fit.dependencies]
 pytorch = ">=2.6"
@@ -46,6 +49,7 @@ smirnoff99frosst = ">=1.1.0.1" # Required by yammbs
 
 [feature.fit.pypi-dependencies]
 yammbs = { git = "https://github.com/openforcefield/yammbs.git", rev = "8468ad9" }
+tyff = { git = "https://github.com/openforcefield/tyff.git", rev = "08ad267" }
 
 [feature.ptm.dependencies]
 # Pablo deps

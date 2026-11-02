@@ -15,8 +15,9 @@ dependencies:
 - pydantic >=2.0,<3
 - mdanalysis *
 - smirnoff99frosst >=1.1.0.1
-- python >=3.12
-- openff-toolkit-examples >=0.17.1
+- python 3.12.*
+- openff-toolkit-examples >=0.18.1
+- openff-interchange >=0.5.3
 - openff-nagl-base >=0.5.2
 - openff-nagl-models *
 - nglview >=3.0.6,<3.1.0
@@ -32,7 +33,10 @@ dependencies:
 - isort *
 - snakeviz *
 - tqdm *
+- pyarrow 20.*
+- datasets 4.*
 - pip
 - pip:
   - yammbs @ git+https://github.com/openforcefield/yammbs.git@8468ad9
+  - tyff @ git+https://github.com/openforcefield/tyff.git@08ad267
 
