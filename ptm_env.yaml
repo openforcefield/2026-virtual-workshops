@@ -27,6 +27,8 @@ dependencies:
 - isort *
 - snakeviz *
 - tqdm *
+- openff-packmol
+- packmol
 - pip
 - pip:
   - openff-pablo @ git+https://github.com/openforcefield/openff-pablo.git@v0.2.2
