@@ -18,7 +18,7 @@ openff-nagl-base = ">=0.6.0"
 openff-nagl-models = "*"
 openff-interchange = ">=0.5.3"
 openff-packmol = "*"
-packmol = "*"  # need packmol executable, without AmberTools we need standalone package
+packmol = "<100"  # need packmol executable, without AmberTools we need standalone package
 nglview = ">=3.0.6,<3.1.0"
 ipython = "*"
 jupyterlab = ">=4"
