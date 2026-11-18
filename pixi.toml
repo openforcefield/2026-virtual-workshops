@@ -12,10 +12,13 @@ readme = "README.md"
 
 [dependencies]
 python = ">=3.12"
-openff-toolkit-examples = ">=0.18.1"
-openff-interchange = ">=0.5.3"
-openff-nagl-base = ">=0.5.2"
+openff-toolkit-examples = ">=0.19"
+openff-forcefields = ">=2026.11.0"  # need Rosemary RC1
+openff-nagl-base = ">=0.6.0"
 openff-nagl-models = "*"
+openff-interchange = ">=0.5.3"
+openff-packmol = "*"
+packmol = "<100"  # need packmol executable, without AmberTools we need standalone package
 nglview = ">=3.0.6,<3.1.0"
 ipython = "*"
 jupyterlab = ">=4"
@@ -31,7 +34,7 @@ snakeviz = "*"
 tqdm = "*"
 
 [feature.fit.dependencies]
-pytorch = ">=2.6"
+pytorch = ">=2.10"
 smee = "*"
 descent = "*"
 openff-qcsubmit = ">=0.57.0"
